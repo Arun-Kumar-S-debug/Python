@@ -1,0 +1,28 @@
+class Solution(object):
+    def isPalindrome(self,x):
+        j=x//1000
+        l=(x-j*1000)//100
+        m=(x-j*1000-l*100)//10
+        n=(x-j*1000-l*100-m*10)
+        if j!=0:
+            v=n*1000+m*100+l*10+j*1
+            if v==x:
+                return('true')
+            else:
+                return('false')
+        elif j==0 and l!=0:
+            v=n*100+m*10+l
+            if v==x:
+                return('true')
+            else:
+                return('false')
+        else:
+            v=n*10+m
+            if v==x:
+                return('true')
+            else:
+                return('false')
+
+x=int(input(""))
+h=Solution()
+print(h.isPalindrome(x))
