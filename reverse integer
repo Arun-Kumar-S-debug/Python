@@ -1,0 +1,18 @@
+class Solution(object):
+    def reverse(self,x):
+        k=str(x)
+        p=k[::-1]
+        if x<0:
+            v=k[:0:-1]
+            m="-"
+            for i in v:
+                m=m+i
+            return(int(m))
+        if x>0:
+            n=""
+            for i in p:
+                n=n+i
+            return(int(n))
+h1=Solution()
+x=int(input("x="))
+print(h1.reverse(x))
