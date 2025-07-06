@@ -1,0 +1,12 @@
+class Solution(object):
+    def lengthOfLongestSubstring(self,s):
+        self.l=[]
+        for i in s:
+            self.l.append(i)
+
+        self.j=set(self.l)
+        print(len(self.j))
+
+s=input()
+h1=Solution()
+h1.lengthOfLongestSubstring(s)
