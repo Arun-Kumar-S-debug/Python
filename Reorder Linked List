@@ -1,0 +1,24 @@
+class Solution:
+    def reorderList(self,head):
+        l=[]
+        if len(a)%2==0:
+            m=1
+            for i in range(0,int(len(a)/2)):
+                l.append(a[i])
+                l.append(0)
+            for j in range(len(a)-1,int((len(a)/2)-1),-1):
+                l[m]=a[j]
+                m+=2
+        else:
+            n=1
+            for i in range(0,int((len(a)/2)+1)):
+                l.append(a[i])
+                l.append(0)
+            for j in range(len(a)-1,int(len(a)/2),-1):
+                l[n]=a[j]
+                n+=2
+            l.pop(len(l)-1)
+        print(l)
+a=eval(input())
+h1=Solution()
+h1.reorderList(a)
