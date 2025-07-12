@@ -1,0 +1,10 @@
+class Solution:
+    def mergeTwoLists(self,list1,list2):
+        for i in list2:
+            list1.append(i)
+        list1.sort()
+        print(list1)
+a=eval(input())
+b=eval(input())
+h1=Solution()
+h1.mergeTwoLists(a,b)
