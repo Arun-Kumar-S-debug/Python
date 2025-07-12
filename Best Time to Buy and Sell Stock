@@ -1,0 +1,11 @@
+class Solution:
+    def maxProfit(self,prices):
+        minimum=min(a)
+        l=[]
+        for i in range(a.index(minimum),len(a)):
+            l.append(a[i])
+        maxi=max(l)
+        print(maxi-minimum)
+a=eval(input())
+h1=Solution()
+h1.maxProfit(a)
