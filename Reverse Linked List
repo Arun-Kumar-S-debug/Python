@@ -1,0 +1,9 @@
+class Solution:
+    def reverseList(self,head):
+        l=[]
+        for i in range(len(a)-1,-1,-1):
+            l.append(a[i])
+        print(l)
+a=eval(input())
+h1=Solution()
+h1.reverseList(a)
