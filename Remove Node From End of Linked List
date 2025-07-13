@@ -1,0 +1,11 @@
+class Solution:
+    def removeNthFromEnd(self,head,n):
+        for i in range(0,len(head)):
+            if n+i==len(head):
+                head.pop(i)
+        print(head)
+
+a=eval(input("enter list:"))
+b=int(input("n="))
+h1=Solution()
+h1.removeNthFromEnd(a,b)
