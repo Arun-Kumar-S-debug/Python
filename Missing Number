@@ -1,1 +1,14 @@
-
+class Solution:
+    def missingNumber(self,nums):
+        l=[]
+        j=0
+        for i in nums:
+            if j==i:
+                j=j+1
+            else:
+                l.append(j)
+        l.append(len(nums))
+        print(l[0])
+a=eval(input())
+h1=Solution()
+h1.missingNumber(a)
