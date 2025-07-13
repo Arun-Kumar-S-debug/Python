@@ -1,0 +1,12 @@
+class Solution:    
+    def mergeKLists(self,lists):
+        l=[]
+        for i in lists:
+            for j in i:
+                l.append(j)
+        l.sort()
+        print(l)
+
+a=eval(input("enter list:"))
+h1=Solution()
+h1.mergeKLists(a)
