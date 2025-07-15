@@ -1,0 +1,27 @@
+class Solution:
+    def topKFrequent(self,nums,k):
+        b=list(set(nums))
+        l=[]
+        for i in b:
+            m=nums.count(i)
+            l.append(m)
+        mb=[]
+        for i in l:
+            vi=[]
+            vi.append(i)
+            mb.append(vi)
+        ib=0
+        for i in mb:
+            i.append(b[ib])
+            ib+=1
+        mb.sort()
+        mb.reverse()
+        result=[]
+        for i in range(0,k):
+            result.append(mb[i][1])
+        result.sort()
+        print(result)
+a=eval(input("nums="))
+n=int(input("k="))
+h1=Solution()
+h1.topKFrequent(a,n)
