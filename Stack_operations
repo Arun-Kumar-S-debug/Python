@@ -1,0 +1,64 @@
+class arra():
+    a=None
+    array=None
+class operation():
+    def __init__(self):
+        self.temp=None
+    def push(self,value):
+        stack=arra()
+        stack.a=value
+        stack.array=self.temp
+        self.temp=stack
+    def remove(self):
+        print(self.temp.array.a)
+    def display(self):
+        v=self.temp
+        j=0
+        while v!=None:
+            j=v.a
+            v=v.array
+            print(j)
+    def peek(self):
+        print(self.temp.a)
+    def isempty(self):
+        if self.temp==None:
+            return True
+        else:
+            return False
+    def size(self):
+        v=self.temp
+        j=0
+        s=0
+        while v!=None:
+            j=v.a
+            v=v.array
+            s=s+1
+        return(s)
+
+print('''Use the keywords:
+            Push()-To push the element on the top,
+            Peek()-Return the top element,
+            isEmpty()-Return to true if stack is empty,
+            Display()-Print all elements from top to bottom,
+            Size()-Return the size of the stack and
+            End-To exit from testing.\n\n''')
+
+obj=operation()
+j=True
+while j==True:
+    get_operation=input("Enter the name of operation:")
+    if get_operation=="Push()":
+        values=input("Enter the values:").split(' ')
+        for i in values:
+            obj.push(i)
+        print("The values are inseted into stack.")
+    elif get_operation=="Display()":
+        obj.display()
+    elif get_operation=="Peek()":
+        obj.peek()
+    elif get_operation=="isEmpty()":
+        print(obj.isempty())
+    elif get_operation=="Size()":
+        print("The size of the stack is ",obj.size())
+    elif get_operation=="End":
+        j=False
